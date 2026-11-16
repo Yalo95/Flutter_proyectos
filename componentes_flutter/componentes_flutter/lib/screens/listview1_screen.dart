@@ -6,12 +6,12 @@ class Listview1Screen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       appBar: AppBar(
-        title: Text('Listview1 Tipo 1'),
+        title: const Text('Listview1 Tipo 1'),
       ),
       body:ListView(
-        children: [
+        children: const [
           Text('Hola mundo')
         ],
       )
