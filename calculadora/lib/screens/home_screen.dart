@@ -50,35 +50,37 @@ class HomeScreen extends StatelessWidget{
                       child: Icon(Icons.add),
                       onPressed: null
                     ),
-                    FloatingActionButton(
-                      backgroundColor: Colors.blue,
-                      foregroundColor: Colors.white,
-                      child: Text("4"),
-                      onPressed: null
+                    Column(
+                      FloatingActionButton(
+                        backgroundColor: Colors.blue,
+                        foregroundColor: Colors.white,
+                        child: Text("4"),
+                        onPressed: null
                     ),
-                    FloatingActionButton(
-                      backgroundColor: Colors.blue,
-                      foregroundColor: Colors.white,
-                      child: Text("5"),
-                      onPressed: null
-                    ),
-                    FloatingActionButton(
-                      backgroundColor: Colors.blue,
-                      foregroundColor: Colors.white,
-                      child: Text("6"),
-                      onPressed: null
-                    ),
-                    FloatingActionButton(
-                      backgroundColor: Colors.blue,
-                      foregroundColor: Colors.white,
-                      child: Text("7"),
-                      onPressed: null
-                    ),
-                    FloatingActionButton(
-                      backgroundColor: Colors.blue,
-                      foregroundColor: Colors.white,
-                      child: Icon(Icons.remove),
-                      onPressed: null
+                      FloatingActionButton(
+                        backgroundColor: Colors.blue,
+                        foregroundColor: Colors.white,
+                        child: Text("5"),
+                        onPressed: null
+                      ),
+                      FloatingActionButton(
+                        backgroundColor: Colors.blue,
+                        foregroundColor: Colors.white,
+                        child: Text("6"),
+                        onPressed: null
+                      ),
+                      FloatingActionButton(
+                        backgroundColor: Colors.blue,
+                        foregroundColor: Colors.white,
+                        child: Text("7"),
+                        onPressed: null
+                      ),
+                      FloatingActionButton(
+                        backgroundColor: Colors.blue,
+                        foregroundColor: Colors.white,
+                        child: Icon(Icons.remove),
+                        onPressed: null
+                      ),
                     ),
                     FloatingActionButton(
                       backgroundColor: Colors.blue,
