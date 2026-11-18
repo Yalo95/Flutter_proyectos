@@ -8,12 +8,8 @@ class MyApp extends StatelessWidget {
 
    @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Calculadora',
-      theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
-      ),
       home: HomeScreen(),
     );
   }
