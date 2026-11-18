@@ -14,18 +14,8 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       //home: Listview2Screen(),
       initialRoute: AppRoutes.initialRoute,
-      routes: {
-        'listview1':(BuildContext context) => Listview1Screen(), 
-        'listview2':(BuildContext context) => Listview2Screen(),
-        'alert':(BuildContext context) => AlertScreen(),
-        'card':(BuildContext context) => CardScreen(),
-        'home':(BuildContext context) => HomeScreen(),
-      },
-      onGenerateRoute: (settings) {
-        return MaterialPageRoute(
-          builder: (context) => AlertScreen(),
-        );
-      },
+      routes: AppRoutes.routes,
+      onGenerateRoute: AppRoutes.onGenerateRoute,
     ); 
   }
 }
