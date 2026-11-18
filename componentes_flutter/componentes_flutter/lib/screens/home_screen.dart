@@ -17,8 +17,9 @@ class HomeScreen extends StatelessWidget {
           leading: Icon(Icons.piano),
           title: Text('Nombre de la ruta'),
           onTap: (){
-            final route = MaterialPageRoute(builder: (context) => Listview1Screen());
-            Navigator.push(context, route);
+            //final route = MaterialPageRoute(builder: (context) => Listview1Screen());
+            Navigator.pushNamed(context, 'card'); //.pushReplacement sirve para que no haya flecha para volver a atrás. El .pushNamed sirve para llevar esa 
+                                                  //pantalla a la pantalla que hayamos creado, en este caso en el main. Es la manera más adecuada.
           },
          ),
          separatorBuilder: (context, index) => Divider(),
