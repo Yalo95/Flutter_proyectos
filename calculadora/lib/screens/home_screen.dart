@@ -17,11 +17,10 @@ class HomeScreen extends StatelessWidget{
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text('1', style: TextStyle(fontSize: 25),)
+               CustomFloatingActionButton()
               ],
           ),
         ),
-        floatingActionButton: CustomFloatingActionButton(),
       );
     }
 }
@@ -38,14 +37,12 @@ class CustomFloatingActionButton extends StatelessWidget {
             child: Text("0"),
             onPressed: null
           ),
-      
           FloatingActionButton(
             backgroundColor: Colors.blue,
             foregroundColor: Colors.white,
             child: Text("1"),
             onPressed: null
           ),
-      
           FloatingActionButton(
             backgroundColor: Colors.blue,
             foregroundColor: Colors.white,
@@ -58,14 +55,12 @@ class CustomFloatingActionButton extends StatelessWidget {
             child: Text("3"),
             onPressed: null
           ),
-      
           FloatingActionButton(
             backgroundColor: Colors.blue,
             foregroundColor: Colors.white,
             child: Text("4"),
             onPressed: null
           ),
-      
           FloatingActionButton(
             backgroundColor: Colors.blue,
             foregroundColor: Colors.white,
@@ -78,14 +73,12 @@ class CustomFloatingActionButton extends StatelessWidget {
             child: Text("6"),
             onPressed: null
           ),
-      
           FloatingActionButton(
             backgroundColor: Colors.blue,
             foregroundColor: Colors.white,
             child: Text("7"),
             onPressed: null
           ),
-      
           FloatingActionButton(
             backgroundColor: Colors.blue,
             foregroundColor: Colors.white,
@@ -98,14 +91,12 @@ class CustomFloatingActionButton extends StatelessWidget {
             child: Text("9"),
             onPressed: null
           ),
-      
           FloatingActionButton(
             backgroundColor: Colors.blue,
             foregroundColor: Colors.white,
             child: Icon(Icons.add),
             onPressed: null
           ),
-      
           FloatingActionButton(
             backgroundColor: Colors.blue,
             foregroundColor: Colors.white,
@@ -124,6 +115,12 @@ class CustomFloatingActionButton extends StatelessWidget {
             child: Icon(CupertinoIcons.divide), //Para el signo de %, con cupertino porque material no lo tiene
             onPressed: null
           ),
+          FloatingActionButton(
+            backgroundColor: Colors.blue,
+            foregroundColor: Colors.white,
+            child: Icon(CupertinoIcons.equal), //Para el signo de =, con cupertino porque material no lo tiene
+            onPressed: null 
+          )
         ],
       );
     }
