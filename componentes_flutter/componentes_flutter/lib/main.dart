@@ -1,9 +1,5 @@
-import 'package:componentes_flutter/screens/alert_screen.dart';
-import 'package:componentes_flutter/screens/card_screen.dart';
-import 'package:componentes_flutter/screens/home_screen.dart';
-import 'package:componentes_flutter/screens/listview1_screen.dart';
-import 'package:componentes_flutter/screens/listview2_screen.dart';
 import 'package:flutter/material.dart';
+import 'screens/screens.dart'; //Buenas prácticas para meter todas las importaciones de todas las clases
 
 void main() => runApp(const MyApp());
 
@@ -15,7 +11,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: Listview2Screen(),
+      //home: Listview2Screen(),
+      initialRoute: 'home',
       routes: {
         'listview1':(BuildContext context) => Listview1Screen(), 
         'listview2':(BuildContext context) => Listview2Screen(),
