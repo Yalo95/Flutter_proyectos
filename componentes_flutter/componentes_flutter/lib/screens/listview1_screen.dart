@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Listview1Screen extends StatelessWidget {
+
+  final options = const['Vice City', 'San Andreas', 'GTA V', 'GTA VI'];
    
   const Listview1Screen({Key? key}) : super(key: key);
   
@@ -8,11 +10,17 @@ class Listview1Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Listview1 Tipo 1'),
+        title: Text('Listview Tipo 1'),
       ),
-      body:ListView(
-        children: const [
-          Text('Hola mundo')
+      body: ListView(
+        children: [
+          ...options.map((e) => 
+            ListTile(
+              trailing: Icon(Icons.arrow_forward_ios_outlined),
+              title: Text( e ),
+            ),
+          ).toList()
+
         ],
       )
     );
