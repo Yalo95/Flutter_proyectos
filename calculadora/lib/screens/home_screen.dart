@@ -102,7 +102,6 @@ class HomeScreen extends StatelessWidget{
                       child: Icon(Icons.close), //Para multiplicar
                       onPressed: null
                     ),
-                    
                   ]
                 ),
                 Row (
