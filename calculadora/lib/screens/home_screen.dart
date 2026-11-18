@@ -18,14 +18,8 @@ class HomeScreen extends StatelessWidget{
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    FloatingActionButton(
-                      backgroundColor: Colors.blue,
-                      foregroundColor: Colors.white,
-                      child: Text("0"),
-                      onPressed: null
-                    ),
                     FloatingActionButton(
                       backgroundColor: Colors.blue,
                       foregroundColor: Colors.white,
@@ -50,6 +44,11 @@ class HomeScreen extends StatelessWidget{
                       child: Icon(Icons.add),
                       onPressed: null
                     ),
+                  ]
+                ),
+                Row (
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
                     FloatingActionButton(
                       backgroundColor: Colors.blue,
                       foregroundColor: Colors.white,
@@ -62,22 +61,27 @@ class HomeScreen extends StatelessWidget{
                       child: Text("5"),
                       onPressed: null
                     ),
-                    FloatingActionButton(
+                    FloatingActionButton(                        
                       backgroundColor: Colors.blue,
                       foregroundColor: Colors.white,
                       child: Text("6"),
                       onPressed: null
                     ),
+                     FloatingActionButton(
+                      backgroundColor: Colors.blue,
+                      foregroundColor: Colors.white,
+                      child: Icon(Icons.remove),
+                      onPressed: null
+                    ),
+                  ]
+                ),
+                Row (
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
                     FloatingActionButton(
                       backgroundColor: Colors.blue,
                       foregroundColor: Colors.white,
                       child: Text("7"),
-                      onPressed: null
-                    ),
-                    FloatingActionButton(
-                      backgroundColor: Colors.blue,
-                      foregroundColor: Colors.white,
-                      child: Icon(Icons.remove),
                       onPressed: null
                     ),
                     FloatingActionButton(
@@ -91,13 +95,29 @@ class HomeScreen extends StatelessWidget{
                       foregroundColor: Colors.white,
                       child: Text("9"),
                       onPressed: null
-                    ),
-                    
-                    
+                    ), 
                     FloatingActionButton(
                       backgroundColor: Colors.blue,
                       foregroundColor: Colors.white,
                       child: Icon(Icons.close), //Para multiplicar
+                      onPressed: null
+                    ),
+                    
+                  ]
+                ),
+                Row (
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    FloatingActionButton(
+                      backgroundColor: Colors.blue,
+                      foregroundColor: Colors.white,
+                      child: Text(","),
+                      onPressed: null
+                    ),
+                    FloatingActionButton(
+                      backgroundColor: Colors.blue,
+                      foregroundColor: Colors.white,
+                      child: Text("0"),
                       onPressed: null
                     ),
                     FloatingActionButton(
