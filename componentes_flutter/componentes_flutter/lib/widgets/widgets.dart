@@ -1,0 +1,1 @@
+export 'package:componentes_flutter/widgets/custom_card_tipo1.dart';
