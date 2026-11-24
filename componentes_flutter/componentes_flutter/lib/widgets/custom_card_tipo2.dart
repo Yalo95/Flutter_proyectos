@@ -9,6 +9,10 @@ class CustomCardTipo2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      clipBehavior: Clip.antiAlias, //Para bordear el card y alinea el contenido a ese espacio
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(25), //Para elegir la cantidad del redondeo. Se puede cortar el contenido de la imagen.
+      ),
       elevation: 10,
       child: Column(
         children: [
@@ -19,7 +23,13 @@ class CustomCardTipo2 extends StatelessWidget {
             height: 300,
             fit: BoxFit.cover, //Para que si le pones una altura no recorte demasiado la foto, porque ocupa todo el width y se desajusta
             fadeInDuration: Duration(milliseconds: 3000), //Para que tarde 3 segundos en cargarse la imagen, con un efecto difuminador.
+          ),
+          Container(
+            alignment: AlignmentDirectional.centerEnd,
+            padding: EdgeInsets.only(top: 10, bottom: 10, right: 10),
+            child: Text('Balón de fútbol')
           )
+          
         ],
       ),
     );
