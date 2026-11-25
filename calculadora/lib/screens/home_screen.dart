@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:calculadora/theme/theme.dart';
 import 'package:calculadora/models/model.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 
 class HomeScreen extends StatefulWidget{
   
@@ -19,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
     Widget build(BuildContext context){
       return Scaffold(
         appBar: AppBar(
-          title: Text('Calculadora', style: TextStyle(color: Colors.white, fontSize: 32)),
+          title: Text('Calculadora Gondoriana')
         ),
         body:
             Column(
@@ -28,13 +30,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Container(
                     alignment: Alignment.bottomRight,
                     padding: EdgeInsets.all(20),
-                    color: Colors.white,
+                    color: Color(0xFFEDEBE6),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Text(logic.previous, style: TextStyle(color: Colors.grey, fontSize: 24)),
-                        Text(logic.result, style: TextStyle(color: Colors.black, fontSize: 50))
+                        Text(logic.previous, style: GoogleFonts.cinzel(color: Color(0xFF7A7F87), fontSize: 24)),
+                        Text(logic.result, style: GoogleFonts.cinzel(color: Color(0xFF1A1E24), fontSize: 50))
                       ]
                     )
                   )
@@ -141,6 +143,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: EdgeInsets.all(4),
                         child: ElevatedButton(
                           child: Text("/"),
+                          style: AppTheme.operatorStyle,
                           onPressed: (){
                             setState(() {
                               logic.addOperator("/");
@@ -197,6 +200,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: EdgeInsets.all(4),
                         child: ElevatedButton(
                           child: Text("+"),
+                          style: AppTheme.operatorStyle,
                           onPressed: (){
                             setState(() {
                               logic.addOperator("+");
@@ -253,6 +257,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: EdgeInsets.all(4),
                         child: ElevatedButton(
                           child: Text("-"),
+                          style: AppTheme.operatorStyle,
                           onPressed: (){
                             setState(() {
                               logic.addOperator("-");
@@ -308,7 +313,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Padding(
                         padding: EdgeInsets.all(4),
                         child: ElevatedButton(
-                          child: Text("x"), //Para multiplicar
+                          child: Text("x"),
+                          style: AppTheme.operatorStyle, 
                           onPressed: (){
                             setState(() {
                               logic.addOperator("*");
@@ -364,7 +370,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Padding(
                       padding: EdgeInsets.all(4),
                       child: ElevatedButton(
-                          child: Text("="), //Para el signo de =, con cupertino porque material no lo tiene
+                          child: Text("="),
+                          style: AppTheme.equalStyle,
                           onPressed: (){
                             setState(() {
                               logic.calculate();

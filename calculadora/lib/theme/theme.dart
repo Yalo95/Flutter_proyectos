@@ -1,24 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
  
-  static const Color background = Colors.blue;
-  static const Color fontColor = Colors.white;
-  static const double buttonspacing = 8;
+  static const Color backgroundGondor = Color(0xFF3C434D);
+  static const Color fontColorGondor = Color(0xFFF2F2F2);
+  static const double buttonSpacing = 8;
+  static const Color negro = Color(0xFF0F1115);
+  static const Color plata = Color(0xFFC0C4CC);
+  static const Color azul = Color(0xFF1F2A44);
+  
+  
 
 
   static final ThemeData lightTheme = ThemeData.light().copyWith(
+      scaffoldBackgroundColor: Color(0xFF0F1115),
       appBarTheme: AppBarTheme(
       //Color primario
-        backgroundColor: background,
+        backgroundColor: negro,
+        foregroundColor: Color(0xFFF2F2F2),
+        titleTextStyle: GoogleFonts.cinzel(color: Color(0xFFF2F2F2), fontSize: 32) 
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: background,
-          foregroundColor: fontColor,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+          side: BorderSide(color:plata, width: 1),
+          iconSize: 32,
+          backgroundColor: backgroundGondor,
+          foregroundColor: fontColorGondor,
           minimumSize: Size(8, 82),
-          textStyle: TextStyle(fontSize: 36)
+          textStyle: GoogleFonts.cinzel(fontSize: 36)
       )
     )
+  );
+  static final ButtonStyle operatorStyle = ElevatedButton.styleFrom(
+    backgroundColor: azul
+    );
+  static final ButtonStyle equalStyle = ElevatedButton.styleFrom(
+    backgroundColor: plata,
+    foregroundColor: negro
   );
 }
