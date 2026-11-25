@@ -1,4 +1,5 @@
 import 'package:componentes_flutter/routes/app_routes.dart';
+import 'package:componentes_flutter/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'screens/screens.dart'; //Buenas prácticas para meter todas las importaciones de todas las clases
 
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       initialRoute: AppRoutes.initialRoute,
       routes: AppRoutes.getAppRoutes(),
       onGenerateRoute: AppRoutes.onGenerateRoute,
+      theme: AppTheme.lightTheme
     ); 
   }
 }
