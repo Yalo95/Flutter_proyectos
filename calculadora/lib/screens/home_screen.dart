@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     alignment: Alignment.bottomRight,
                     padding: EdgeInsets.all(20),
                     color: Colors.white,
-                    child: Text(logic.resultado, style: TextStyle(color: Colors.black, fontSize: 50),)
+                    child: Text(logic.result, style: TextStyle(color: Colors.black, fontSize: 50),)
                   )
                 ),
                 Row(
