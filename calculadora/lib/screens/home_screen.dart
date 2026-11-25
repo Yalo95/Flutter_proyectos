@@ -1,8 +1,7 @@
-import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:calculadora/theme/theme.dart';
+import 'package:calculadora/models/model.dart';
 
 class HomeScreen extends StatefulWidget{
   
@@ -14,7 +13,9 @@ class HomeScreen extends StatefulWidget{
 
 class _HomeScreenState extends State<HomeScreen> {
 
-  String number = "0";
+  String expression = "0";
+  AppLogic logic = new AppLogic();
+  
 
   @override
     Widget build(BuildContext context){
@@ -30,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     alignment: Alignment.bottomRight,
                     padding: EdgeInsets.all(20),
                     color: Colors.white,
-                    child: Text(number, style: TextStyle(color: Colors.black, fontSize: 50),)
+                    child: Text(logic.resultado, style: TextStyle(color: Colors.black, fontSize: 50),)
                   )
                 ),
                 Row(
@@ -71,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     ElevatedButton(
                       child: Icon(CupertinoIcons.divide), //Para el signo de division, con cupertino porque material no lo tiene
-                      onPressed: addDigit()
+                      onPressed: null
                     ),
                   ]
                 ),
@@ -80,15 +81,27 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     ElevatedButton(
                       child: Text("1"),
-                      onPressed: addDigit()
+                      onPressed: (){
+                        setState(() {
+                          logic.addDigit("1");
+                        });
+                      }
                     ),
                     ElevatedButton(
                       child: Text("2"),
-                      onPressed: addDigit()
+                      onPressed: (){
+                        setState(() {
+                          logic.addDigit("2");
+                        });
+                      }
                     ),
                     ElevatedButton(
                       child: Text("3"),
-                      onPressed: addDigit()
+                      onPressed: (){
+                        setState(() {
+                          logic.addDigit("3");
+                        });
+                      }
                     ),
                     ElevatedButton(
                       child: Icon(Icons.add),
@@ -101,15 +114,27 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     ElevatedButton(
                       child: Text("4"),
-                      onPressed: addDigit()
+                      onPressed: (){
+                        setState(() {
+                          logic.addDigit("4");
+                        });
+                      }
                     ),
                     ElevatedButton(
                       child: Text("5"),
-                      onPressed: addDigit()
+                      onPressed: (){
+                        setState(() {
+                          logic.addDigit("5");
+                        });
+                      }
                     ),
                     ElevatedButton(
                       child: Text("6"),
-                      onPressed: addDigit()
+                      onPressed: (){
+                        setState(() {
+                          logic.addDigit("6");
+                        });
+                      }
                     ),
                      ElevatedButton(
                       child: Icon(Icons.remove),
@@ -122,15 +147,27 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     ElevatedButton(
                       child: Text("7"),
-                      onPressed: addDigit()
+                      onPressed: (){
+                        setState(() {
+                          logic.addDigit("7");
+                        });
+                      }
                     ),
                     ElevatedButton(
                       child: Text("8"),
-                      onPressed: addDigit()
+                      onPressed: (){
+                        setState(() {
+                          logic.addDigit("8");
+                        });
+                      }
                     ),
                     ElevatedButton(
                       child: Text("9"),
-                      onPressed: addDigit()
+                      onPressed: (){
+                        setState(() {
+                          logic.addDigit("9");
+                        });
+                      }
                     ), 
                     ElevatedButton(
                       child: Icon(Icons.close), //Para multiplicar
@@ -147,7 +184,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     ElevatedButton(
                       child: Text("0"),
-                      onPressed: addDigit(),
+                      onPressed: (){
+                        setState(() {
+                          logic.addDigit("0");
+                        });
+                      }
                     ),
                     ElevatedButton(
                       child: Text(","), 
