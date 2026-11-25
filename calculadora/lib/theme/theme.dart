@@ -4,7 +4,7 @@ class AppTheme {
  
   static const Color background = Colors.blue;
   static const Color fontColor = Colors.white;
-
+  static const double buttonspacing = 8;
 
 
   static final ThemeData lightTheme = ThemeData.light().copyWith(
