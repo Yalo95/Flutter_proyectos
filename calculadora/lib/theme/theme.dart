@@ -1,0 +1,22 @@
+import 'package:flutter/material.dart';
+
+class AppTheme {
+ 
+  static const Color background = Colors.blue;
+  static const Color fontColor = Colors.white;
+
+
+
+  static final ThemeData lightTheme = ThemeData.light().copyWith(
+      appBarTheme: AppBarTheme(
+      //Color primario
+        backgroundColor: background,
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: background,
+          foregroundColor: fontColor
+      )
+    )
+  );
+}
