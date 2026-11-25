@@ -14,7 +14,7 @@ class HomeScreen extends StatefulWidget{
 class _HomeScreenState extends State<HomeScreen> {
 
   String expression = "0";
-  AppLogic logic = new AppLogic();
+  AppLogic logic = AppLogic();
   
 
   @override
@@ -39,19 +39,35 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     ElevatedButton(
                       child: Text("%"), 
-                      onPressed: null,
+                      onPressed: (){
+                        setState(() {
+                          logic.percent();
+                        });
+                      },
                     ),
                     ElevatedButton(
                       child: Text("CE"),
-                      onPressed: null
+                      onPressed: (){
+                        setState(() {
+                          logic.clearEntry();
+                        });
+                      }
                     ),
                     ElevatedButton(
                       child: Text("C"),
-                      onPressed: null
+                      onPressed: (){
+                        setState(() {
+                          logic.clear();
+                        });
+                      }
                     ),
                     ElevatedButton(
-                      child: Icon(Icons.backspace_outlined),
-                      onPressed: null
+                      child: Icon(Icons.backspace_outlined), //Icono de borrado con flecha
+                      onPressed: (){
+                        setState(() {
+                          logic.deleteLast();
+                        });
+                      }
                     ),
                   ]
                 ),
@@ -60,19 +76,35 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     ElevatedButton(
                       child: Text("1/x"),
-                      onPressed: null
+                      onPressed: (){
+                        setState(() {
+                          logic.inverse();
+                        });
+                      }
                     ),
                     ElevatedButton(
                       child: Text("x²"),
-                      onPressed: null
+                      onPressed: (){
+                        setState(() {
+                          logic.square();
+                        });
+                      }
                     ),
                     ElevatedButton(
                       child: Text("√x"),
-                      onPressed: null
+                      onPressed: (){
+                        setState(() {
+                          logic.squareRoot();
+                        });
+                      }
                     ),
                     ElevatedButton(
                       child: Icon(CupertinoIcons.divide), //Para el signo de division, con cupertino porque material no lo tiene
-                      onPressed: null
+                      onPressed: (){
+                        setState(() {
+                          logic.addOperator("/");
+                        });
+                      }
                     ),
                   ]
                 ),
@@ -105,7 +137,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     ElevatedButton(
                       child: Icon(Icons.add),
-                      onPressed: addDigit()
+                      onPressed: (){
+                        setState(() {
+                          logic.addOperator("+");
+                        });
+                      }
                     ),
                   ]
                 ),
@@ -138,7 +174,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                      ElevatedButton(
                       child: Icon(Icons.remove),
-                      onPressed: null
+                      onPressed: (){
+                        setState(() {
+                          logic.addOperator("-");
+                        });
+                      }
                     ),
                   ]
                 ),
@@ -171,7 +211,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     ), 
                     ElevatedButton(
                       child: Icon(Icons.close), //Para multiplicar
-                      onPressed: null
+                      onPressed: (){
+                        setState(() {
+                          logic.addOperator("*");
+                        });
+                      }
                     ),
                   ]
                 ),
@@ -180,7 +224,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                    ElevatedButton(
                       child: Text("+/-"),
-                      onPressed: null
+                      onPressed: (){
+                        setState(() {
+                          logic.toggleSign();
+                        });
+                      }
                     ),
                     ElevatedButton(
                       child: Text("0"),
@@ -192,11 +240,19 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     ElevatedButton(
                       child: Text(","), 
-                      onPressed: null
+                      onPressed: (){
+                        setState(() {
+                          logic.addDecimal();
+                        });
+                      }
                     ),
                    ElevatedButton(
                       child: Icon(CupertinoIcons.equal), //Para el signo de =, con cupertino porque material no lo tiene
-                      onPressed: null 
+                      onPressed: (){
+                        setState(() {
+                          logic.calculate();
+                        });
+                      } 
                     )
                   ]
                 )
