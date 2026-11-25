@@ -14,9 +14,11 @@ class AppLogic {
     }
   }
   void addOperator(String operator){
-
+    if(result.isEmpty){
+            return;
+    }
     String lastDigit = result.substring(result.length - 1);
-
+    
     if(!operators.contains(lastDigit)){
       result  = result + operator;
     }
@@ -53,29 +55,45 @@ class AppLogic {
         result = "";
         return;
       }if(eval == eval.toInt()){
-
+          result = eval.toInt().toString();
+      }else{
+        result = eval.toString().replaceAll(".", ",");
       }
-
-    }catch{
-
+    }catch (e){
+      result = "";
     }
   }
   void addDecimal(){
-    
+    if(result.isEmpty){
+      result = "0,";
+      return;
+    }
+    String lastDigit = result.substring(result.length - 1);
+    if(operators.contains(lastDigit)){
+      result = result + "0,";
+    }
+    else{
+      result = result + ",";
+    }
   }
   void toggleSign(){
-    
+    result = "-(" + result + ")";
+    calculate();
   }
   void square(){
-    
+    result = "(" + result + ")^2";
+    calculate();
   }
   void squareRoot(){
-    
+    result = "sqrt(" + result + ")";
+    calculate();
   }
   void inverse(){
-  
+    result = "1/(" + result + ")";
+    calculate();
   }
   void percent(){
-    
+    result =  "(" + result + ")/100";
+    calculate();
   }
 }
