@@ -4,6 +4,7 @@ class AppLogic {
 
   String result = "0";
   String operators = "+-*/";
+  String previous = "";
 
   void addDigit(String number){
     if(result == "0"){
@@ -25,6 +26,7 @@ class AppLogic {
   }
   void clear(){
     result = "0";
+    previous = "";
   }
   void clearEntry(){
     String lastChar = "";
@@ -45,6 +47,7 @@ class AppLogic {
     }
   }
   void calculate(){
+    previous = result + "=";
     try{
       ExpressionParser parser = GrammarParser();
       Expression exp = parser.parse(result.replaceAll(",", "."));

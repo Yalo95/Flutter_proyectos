@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:calculadora/theme/theme.dart';
 import 'package:calculadora/models/model.dart';
@@ -30,7 +29,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     alignment: Alignment.bottomRight,
                     padding: EdgeInsets.all(20),
                     color: Colors.white,
-                    child: Text(logic.result, style: TextStyle(color: Colors.black, fontSize: 50),)
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text(logic.previous, style: TextStyle(color: Colors.grey, fontSize: 24)),
+                        Text(logic.result, style: TextStyle(color: Colors.black, fontSize: 50))
+                      ]
+                    )
                   )
                 ),
                 Row(
@@ -134,7 +140,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Padding(
                         padding: EdgeInsets.all(4),
                         child: ElevatedButton(
-                          child: Icon(CupertinoIcons.divide), //Para el signo de division, con cupertino porque material no lo tiene
+                          child: Text("/"),
                           onPressed: (){
                             setState(() {
                               logic.addOperator("/");
@@ -190,7 +196,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Padding(
                         padding: EdgeInsets.all(4),
                         child: ElevatedButton(
-                          child: Icon(Icons.add),
+                          child: Text("+"),
                           onPressed: (){
                             setState(() {
                               logic.addOperator("+");
@@ -246,7 +252,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Padding(
                         padding: EdgeInsets.all(4),
                         child: ElevatedButton(
-                          child: Icon(Icons.remove),
+                          child: Text("-"),
                           onPressed: (){
                             setState(() {
                               logic.addOperator("-");
@@ -302,7 +308,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Padding(
                         padding: EdgeInsets.all(4),
                         child: ElevatedButton(
-                          child: Icon(Icons.close), //Para multiplicar
+                          child: Text("x"), //Para multiplicar
                           onPressed: (){
                             setState(() {
                               logic.addOperator("*");
@@ -358,7 +364,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Padding(
                       padding: EdgeInsets.all(4),
                       child: ElevatedButton(
-                          child: Icon(CupertinoIcons.equal), //Para el signo de =, con cupertino porque material no lo tiene
+                          child: Text("="), //Para el signo de =, con cupertino porque material no lo tiene
                           onPressed: (){
                             setState(() {
                               logic.calculate();
